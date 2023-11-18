@@ -71,6 +71,7 @@ En el caso de las vistas con atributo privado, su acceso será controlado con la
 
 - Usuario cliente: que posee acceso al sitio en modo cliente, pudiendo ver todas las vistas definidas con el atributo público, pero además podrá administrar su carro de compras agregando o eliminando productos antes de comprar.
 
+
 #### Diagrama de Definición de la navegación 
 
 ![Diagrama definicion navegacion](../documentation/navegationDefinition/DefinicionNavegacion.drawio.png)
@@ -80,7 +81,7 @@ En el caso de las vistas con atributo privado, su acceso será controlado con la
 
 A continuación se detallan las tecnologías que serán utilizadas en el desarrollo tanto del frontewnd como del backend.
 
-## Proyecto Frontend
+#### Listado de dependencias del Proyecto Frontend
 
 ![Vite](https://img.shields.io/badge/Vite-v4.4.10-gray?style=flat&logo=Vite&logoColor=white&color=646CFF)
 ![React](https://img.shields.io/badge/React-v18.2.0-gray?style=flat&logo=react&logoColor=white&color=61DAFB)
@@ -90,7 +91,7 @@ A continuación se detallan las tecnologías que serán utilizadas en el desarro
 ![CSS3](https://img.shields.io/badge/CSS3-gray?style=flat&logo=CSS3&logoColor=white&color=1572B6)
 
 
-## Proyecto Backend
+#### Listado de dependencias del Proyecto Backend
 
 ![javascript](https://img.shields.io/badge/javascript-gray?style=flat&logo=javascript&logoColor=white&color=F7DF1E)
 ![nodes](https://img.shields.io/badge/node-v18.16.0-gray?style=flat&logo=node.js&logoColor=white&color=339933)
