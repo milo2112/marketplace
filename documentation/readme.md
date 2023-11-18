@@ -68,4 +68,3 @@ En el caso de las vistas con atributo privado, su acceso será controlado con la
 
 #### Diagrama de Definición de la navegación 
 
-![Diagrama definicion navegacion](../documentation/navegationDefinition/DefinicionNavegacion.drawio.png)
