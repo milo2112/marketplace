@@ -7,3 +7,23 @@ Esta es la documentación del proyecto final del curso FullStack Javascript de l
 #### Home page
 
 ![Home](../documentation/uiDesgin/Home.png)
+
+
+#### Login page
+
+![Login](../documentation/uiDesgin/Login.png)
+
+
+#### Register page
+
+![Register](../documentation/uiDesgin/Register.png)
+
+
+#### Admin page
+
+![Admin](../documentation/uiDesgin/Admin.png)
+
+
+#### Products Gallery page
+
+![Products Gallery](../documentation/uiDesgin/Admin.png)
