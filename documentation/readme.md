@@ -103,3 +103,9 @@ A continuación se detallan las tecnologías que serán utilizadas en el desarro
 ![cors](https://img.shields.io/badge/cors-v2.8.5-gray?style=flatd&color=000000)
 ![jest](https://img.shields.io/badge/jest-v28.1.3-gray?style=flatd&color=000000)
 ![supertest](https://img.shields.io/badge/supertest-v6.2.4-gray?style=flatd&color=000000)
+
+### Requerimiento 4: Diseño de las tablas de la base de datos y sus relaciones
+
+A continuación se detalla el modelo Entidad Relación donde se persistirán los datos del sitio.
+
+![Model](../documentation/MER/model.PNG)
