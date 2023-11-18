@@ -6,5 +6,4 @@ Esta es la documentación del proyecto final del curso FullStack Javascript de l
 ### Requerimiento 1: Diseño de la interfaz gráfica
 #### Home
 
-/*![App Screenshot](../documentation/uiDesgin/Home.png)*/
-![App Screenshot](../documentation/uiDesgin/Home.png)
+![Home](../documentation/uiDesgin/Home.png)
