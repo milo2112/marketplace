@@ -34,6 +34,6 @@ Esta es la documentación del proyecto final del curso FullStack Javascript de l
 ![Products Gallery](../documentation/uiDesgin/Product%20Detail.png)
 
 
-#### Products Detail page
+#### Shopping Cart page
 
 ![Products Gallery](../documentation/uiDesgin/Shopping%20Cart%20View.png)
