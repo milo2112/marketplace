@@ -78,7 +78,10 @@ En el caso de las vistas con atributo privado, su acceso será controlado con la
 
 ### Requerimiento 3: Listado de dependencias a utilizar en el proyecto
 
+A continuación se detallan las tecnologías que serán utilizadas en el desarrollo tanto del frontewnd como del backend.
+
 ## Proyecto Frontend
+
 ![Vite](https://img.shields.io/badge/Vite-v4.4.10-gray?style=flat&logo=Vite&logoColor=white&color=646CFF)
 ![React](https://img.shields.io/badge/React-v18.2.0-gray?style=flat&logo=react&logoColor=white&color=61DAFB)
 ![axios](https://img.shields.io/badge/axios-v1.5.1-gray?style=flat&logo=axios&logoColor=white&color=5A29E4)
@@ -98,3 +101,5 @@ En el caso de las vistas con atributo privado, su acceso será controlado con la
 ![postgresql](https://img.shields.io/badge/pg-v8.11.3-gray?style=flat&logo=postgresql&logoColor=white&color=4169E1)
 ![uuid](https://img.shields.io/badge/uuid-v9.0.1-gray?style=flatd&color=338ee6)
 ![cors](https://img.shields.io/badge/cors-v2.8.5-gray?style=flatd&color=000000)
+![jest](https://img.shields.io/badge/jest-v28.1.3-gray?style=flatd&color=000000)
+![supertest](https://img.shields.io/badge/supertest-v6.2.4-gray?style=flatd&color=000000)
