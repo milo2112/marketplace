@@ -26,4 +26,4 @@ Esta es la documentación del proyecto final del curso FullStack Javascript de l
 
 #### Products Gallery page
 
-![Products Gallery](../documentation/uiDesgin/Admin.png)
+![Products Gallery](../documentation/uiDesgin/Products%20Gallery.png)
