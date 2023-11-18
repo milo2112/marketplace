@@ -4,7 +4,6 @@ Esta es la documentación del proyecto final del curso FullStack Javascript de l
 
 ## Hito 1 - Diseño y prototipo
 ### Requerimiento 1: Diseño de la interfaz gráfica
-#### Screenshots
+#### Home
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 ![App Screenshot](../documentation/uiDesgin/Home.png)
