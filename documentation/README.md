@@ -123,11 +123,6 @@ A continuación se detalla el modelo Entidad Relación donde se persistirán los
 
 #### 🔗 Documentation Link https://documenter.getpostman.com/view/30796892/2s9Ye8eufu
 
-1er
-![Link to Documentation](https://documenter.getpostman.com/view/30796892/2s9Ye8eufu)
-
-2do
-[![Link to Documentation](https://documenter.getpostman.com/view/30796892/2s9Ye8eufu)](https://postman.com/)
 
 A continuación se detalla la documentación asociada a los datos del contrato API.
 
