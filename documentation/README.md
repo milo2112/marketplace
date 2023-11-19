@@ -121,12 +121,9 @@ A continuación se detalla el modelo Entidad Relación donde se persistirán los
 
 #### Disclaimer: Si se requiere ver la doucmentación en línea, puede verla aquí abajo
 
-
-
-
-## 🔗 Links
-[![Documentation](https://documenter.getpostman.com/view/30796892/2s9Ye8eufu)](https://github.com/milo2112)
+#### 🔗 Documentation Link
+[![Link to Documentation](https://documenter.getpostman.com/view/30796892/2s9Ye8eufu)](https://github.com/milo2112)
 
 A continuación se detalla la documentación asociada a los datos del contrato API.
 
-![APIDocumentation](../documentation/apiDocumentation/Marketplace%20API%20documentation%20-%20Milton%20Rosas.postman_collection.json)
+![JSON Documentation](../documentation/apiDocumentation/Marketplace%20API%20documentation%20-%20Milton%20Rosas.postman_collection.json)
