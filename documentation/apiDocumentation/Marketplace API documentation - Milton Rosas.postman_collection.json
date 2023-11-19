@@ -1,0 +1,1011 @@
+{
+	"info": {
+		"_postman_id": "4a7fd657-9519-4771-b702-a4ca8faae5c3",
+		"name": "Marketplace API documentation - Milton Rosas",
+		"description": "---\n\nDocumentación del contrato API del marketplace.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30796892"
+	},
+	"item": [
+		{
+			"name": "Administración de Usuarios",
+			"item": [
+				{
+					"name": "/login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData = JSON.parse(responseBody)\r",
+									"postman.setEnvironmentVariable('token', jsonData.token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"nombrededocente@correo.com\",\r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"login"
+							]
+						},
+						"description": "Con este endpoint podrás loggearte al marketplace para poder realizar una compra y administrar tu carro de compras."
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"nombrededocente@correo.com\",\r\n    \"password\": \"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/login",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "189"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bd-CFSq75GJOIHSkzjPQIkZdnVpezs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Nov 2023 23:40:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5vbWJyZWRlZG9jZW50ZUBjb3JyZW8uY29tIiwiaWF0IjoxNzAwMzUwODI3LCJleHAiOjE3MDAzNTA4ODd9.f5DdEY5qQm2sdDn6Hb5y9IqUFYkPnnq6yh6PIY65SGc\"\n}"
+						},
+						{
+							"name": "Failed response - Incorrect password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"nombrededocente@correo.com\",\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/login",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-ZFsdaz5BJlkGmUe3p9y1pURRLYg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Nov 2023 00:02:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 401,\n    \"message\": \"Incorrect pasword.\"\n}"
+						},
+						{
+							"name": "Failed response - Bad request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"nombrededocente_@correo.com\",\r\n    \"password\": \"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/login",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'none'"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1436"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Nov 2023 00:03:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error</title>\n    </head>\n    <body>\n        <pre>SyntaxError: Unexpected token } in JSON at position 47\n            <br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)\n            <br> &nbsp; &nbsp;at parse (D:\\Cursos\\Desafio Latam\\38.- Octubre 23 - Autenticación y autorización de usuarios JWT\\soft-jobs\\backend\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n            <br> &nbsp; &nbsp;at D:\\Cursos\\Desafio Latam\\38.- Octubre 23 - Autenticación y autorización de usuarios JWT\\soft-jobs\\backend\\node_modules\\body-parser\\lib\\read.js:128:18\n            <br> &nbsp; &nbsp;at AsyncResource.runInAsyncScope (node:async_hooks:203:9)\n            <br> &nbsp; &nbsp;at invokeCallback (D:\\Cursos\\Desafio Latam\\38.- Octubre 23 - Autenticación y autorización de usuarios JWT\\soft-jobs\\backend\\node_modules\\raw-body\\index.js:231:16)\n            <br> &nbsp; &nbsp;at done (D:\\Cursos\\Desafio Latam\\38.- Octubre 23 - Autenticación y autorización de usuarios JWT\\soft-jobs\\backend\\node_modules\\raw-body\\index.js:220:7)\n            <br> &nbsp; &nbsp;at IncomingMessage.onEnd (D:\\Cursos\\Desafio Latam\\38.- Octubre 23 - Autenticación y autorización de usuarios JWT\\soft-jobs\\backend\\node_modules\\raw-body\\index.js:280:7)\n            <br> &nbsp; &nbsp;at IncomingMessage.emit (node:events:513:28)\n            <br> &nbsp; &nbsp;at endReadableNT (node:internal/streams/readable:1359:12)\n            <br> &nbsp; &nbsp;at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n        </pre>\n    </body>\n</html>"
+						},
+						{
+							"name": "Failed response - Resource not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"nombrededocente_@correo.com\",\r\n    \"password\": \"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/login",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c-b1niTP48d6LL6fh17E1MGTLewCc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Nov 2023 00:04:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"Resource not found.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"correo@correo.com\",\r\n    \"password\": \"123\",\r\n    \"name\": \"nombre_usuario\",\r\n    \"lastName\": \"apellido_usuario\",\r\n    \"role\": \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/register",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"register"
+							]
+						},
+						"description": "Con este endpoint podrás registrar nuevos usuarios en el marketplace"
+					},
+					"response": [
+						{
+							"name": "Successful response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"correo@correo.com\",\r\n    \"password\": \"123\",\r\n    \"name\": \"nombre_usuario\",\r\n    \"lastName\": \"apellido_usuario\",\r\n    \"role\": \"user\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/users",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "164"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a4-tH7mo2foze/t6dMGA6TY4qXZUQ8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Nov 2023 00:07:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 55,\n        \"email\": \"correo@correo.com\",\n        \"password\": \"$2a$08$Xmx/51mdsMbTHYyngjvXe.PzDaeKtbh9XCqJvTQ/mLkdEMTjaWFzm\",\n        \"name\": \"nombre_usuario\",\n        \"lastName\": \"apellido_usuario\",\n        \"role\": \"user\"\n    }\n]"
+						},
+						{
+							"name": "Failed response - Internal server error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"correo@correo.cl\",\r\n    \"password\": \"123\",\r\n    \"name\": \"nombre_usuario\",\r\n    \"lastName\": \"apellido_usuario\",\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/users",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f-LeZiuWuH1UVsdWUVZToE/TfmaTs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Nov 2023 00:15:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 500,\n    \"message\": \"Internal server error.\"\n}"
+						}
+					]
+				}
+			],
+			"description": "El endpoint `/login` te permite autenticar la información de los usuarios registrados permitiendo el acceso al sitio.\n\nEl endpoint `/register` te deja registrar en tu base de datos la información de los usuarios que desean registrarse.",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Administración de Productos",
+			"item": [
+				{
+					"name": "Create product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"product_1\",\n    \"name\": \"product_1_name\",\n    \"img\": \"https://some_img_from_internet\",\n    \"description\": \"This is product_1_name\"\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/products",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products"
+							]
+						},
+						"description": "Este endpoint te permite crear un producto, siempre y cuando tengas rol de administrador dentro del marketplace. De otro modo no tendrás acceso debido a que este endpoint esta diseñado en modo privado con la excepción del role=admin."
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"product_1\",\n    \"price\": 50,\n    \"img\": \"https://some_img_from_internet\",\n    \"description\": \"This is product_1_name\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/products",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"12ece9e1-2abf-4edc-8e34-de66e74114d2\",\n    \"title\": \"product_1\",\n    \"price\": 50,\n    \"img\": \"https://some_img_from_internet\",\n    \"description\": \"This is product_1_name\"\n}"
+						},
+						{
+							"name": "Failed response - Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"product_1\",\n    \"price\": 50,\n    \"img\": \"https://some_img_from_internet\",\n    \"description\": \"This is product_1_name\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/products",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n            \"code\": 409,\n            \"message\": \"Item already exists\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get a product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/products/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Este endpoint te permitirá obtener un solo producto a través de su ID."
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products/12ece9e1-2abf-4edc-8e34-de66e74114d2",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"12ece9e1-2abf-4edc-8e34-de66e74114d2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"12ece9e1-2abf-4edc-8e34-de66e74114d2\",\n    \"title\": \"product_1_name\",\n    \"price\": 50,\n    \"img\": \"https://some_img_from_internet\",\n    \"description\": \"This is product_1_name\"\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products/12ece9e1-2abf-4edc-8e34-de66e74114dqqqqq",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"12ece9e1-2abf-4edc-8e34-de66e74114dqqqqq"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"code\": \"404\",\n        \"message\": \"We could not find the product you are looking for\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/products",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products"
+							]
+						},
+						"description": "Este endpoint te permitirá obtener todos los productos que existen en el marketplace."
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/products",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"products\": [\n                    {\n                        \"id\": \"12ece9e1-2abf-4edc-8e34-de66e74114d2\",\n                        \"title\": \"product_1\",\n                        \"price\": 50,\n                        \"img\": \"https://some_img_from_internet\",\n                        \"description\": \"This is product_1_name\"\n                    },\n                    {\n                        \"id\": \"12ece9e1-2abf-4edc-8e34-de66e74114d3\",\n                        \"title\": \"product_2\",\n                        \"price\": 5000,\n                        \"img\": \"https://some_img_from_internet\",\n                        \"description\": \"This is product_2_name\"\n                    },\n                    {\n                        \"id\": \"12ece9e1-2abf-4edc-8e34-de66e74114d4\",\n                        \"title\": \"product_3\",\n                        \"price\": 8050,\n                        \"img\": \"https://some_img_from_internet\",\n                        \"description\": \"This is product_3_name\"\n                    }\n                ]\n}"
+						},
+						{
+							"name": "Filter by Price",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products?price>=1000",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "price>",
+											"value": "1000"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"products\": [\n                    {\n                        \"id\": \"12ece9e1-2abf-4edc-8e34-de66e74114d3\",\n                        \"title\": \"product_2\",\n                        \"price\": 5000,\n                        \"img\": \"https://some_img_from_internet\",\n                        \"description\": \"This is product_2_name\"\n                    },\n                    {\n                        \"id\": \"12ece9e1-2abf-4edc-8e34-de66e74114d4\",\n                        \"title\": \"product_3\",\n                        \"price\": 8050,\n                        \"img\": \"https://some_img_from_internet\",\n                        \"description\": \"This is product_3_name\"\n                    }\n                ]\n}"
+						},
+						{
+							"name": "Failed response - Internal server error Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/products",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f-LeZiuWuH1UVsdWUVZToE/TfmaTs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Nov 2023 00:15:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 500,\n    \"message\": \"Internal server error.\"\n}"
+						}
+					]
+				}
+			],
+			"description": "El endpoint `/products` te permite realizar las siguientes operaciones:\n\n- registrar un producto\n- buscar un producto\n- filtrar productos por precio\n- obtener todos los productos",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5vbWJyZWRlZG9jZW50ZUBjb3JyZW8uY29tIiwiaWF0IjoxNzAwMzUwODI3LCJleHAiOjE3MDAzNTA4ODd9.f5DdEY5qQm2sdDn6Hb5y9IqUFYkPnnq6yh6PIY65SGc",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://farming-simulator.pstmn.io"
+		}
+	]
+}

@@ -2,6 +2,11 @@
 
 Esta es la documentación del proyecto final del curso FullStack Javascript de la academia Desafío Latam
 
+## Author
+
+- Milton Rosas - Github profile: [@milo2112](https://github.com/milo2112)
+
+
 ## Hito 1 - Diseño y prototipo
 ### Requerimiento 1: Diseño de la interfaz gráfica
 
@@ -114,4 +119,14 @@ A continuación se detalla el modelo Entidad Relación donde se persistirán los
 
 ### Requerimiento 5: Diseño del contrato de datos de la API REST
 
+#### Disclaimer: Si se requiere ver la doucmentación en línea, puede verla aquí abajo
+
+
+
+
+## 🔗 Links
+[![Documentation](https://documenter.getpostman.com/view/30796892/2s9Ye8eufu)](https://github.com/milo2112)
+
 A continuación se detalla la documentación asociada a los datos del contrato API.
+
+![APIDocumentation](../documentation/apiDocumentation/Marketplace%20API%20documentation%20-%20Milton%20Rosas.postman_collection.json)
