@@ -122,7 +122,7 @@ A continuación se detalla el modelo Entidad Relación donde se persistirán los
 #### Disclaimer: Si se requiere ver la doucmentación en línea, puede verla aquí abajo
 
 #### 🔗 Documentation Link
-[![Link to Documentation](https://documenter.getpostman.com/view/30796892/2s9Ye8eufu)](https://github.com/milo2112)
+![Link to Documentation](https://documenter.getpostman.com/view/30796892/2s9Ye8eufu)
 
 A continuación se detalla la documentación asociada a los datos del contrato API.
 
