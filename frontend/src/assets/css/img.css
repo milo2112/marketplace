@@ -1,0 +1,62 @@
+.imgWidth {
+    width: 100%;
+    filter:brightness(0.5);
+}
+
+.imgLogo {
+  width: 5%;
+}
+
+.above-text{
+    position: absolute;
+    top: 5.2vw;
+    left: 39.5vw;
+    color: white;
+    font-size: 2.2vw;
+}
+
+.middle-text{
+    position: absolute;
+    top: 8.5vw;
+    left: 40.2vw;
+    color: white;
+    font-size: 0.9vw; 
+}
+
+  .card:hover {
+    box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273);
+    transition: all 0.5s linear;
+  }
+
+  .card-img-top:hover {
+    transform: scale(1.8);
+  }
+
+  .detail-img-top:hover {
+    transform: scale(1.01);
+  }
+
+  .card-img-top {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .detail-img-top {
+    transition: all 0.2s ease-in;
+  }
+
+  .overflow {
+    overflow: hidden;
+  }
+
+  .border-radius {
+    border-radius: 5%;
+  }
+
+  .text-color {
+    color: 'white'
+  }
+
+  .p-5 {
+    padding-left: 0.5px;
+    padding-right: 0.5px;
+  }
