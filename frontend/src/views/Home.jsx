@@ -1,6 +1,7 @@
 import CarouselSlides from '../components/CarouselSlides'
 import Dividers from '../components/Dividers'
 import Catalog from '../components/Catalog'
+import Footer from '../components/Footer'
 
 function Home () {
   return (
@@ -8,6 +9,7 @@ function Home () {
       <CarouselSlides />
       <Dividers />
       <Catalog />
+      <Footer />
     </div>
   )
 }
