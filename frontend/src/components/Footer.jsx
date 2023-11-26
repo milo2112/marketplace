@@ -52,7 +52,7 @@ export default function App() {
                 </a>
               </p>
               <p>
-                <a href='#!' className='text-secondary' style={{ fontFamily: 'Barrio', fontSize: '14px' }}>
+                <a href='https://australbikes.cl/es/' className='text-secondary' style={{ fontFamily: 'Barrio', fontSize: '14px' }}>
                   Rent a Bike
                 </a>
               </p>
@@ -62,8 +62,8 @@ export default function App() {
                 </a>
               </p>
               <p>
-                <a href='#!' className='text-secondary' style={{ fontFamily: 'Barrio', fontSize: '14px' }}>
-                  Help
+                <a href='https://www.couchsurfing.com/places/chile' className='text-secondary' style={{ fontFamily: 'Barrio', fontSize: '14px' }}>
+                  Couchsurfing
                 </a>
               </p>
             </MDBCol>

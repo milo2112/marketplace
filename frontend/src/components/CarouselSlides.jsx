@@ -9,8 +9,8 @@ import { MDBCarousel, MDBCarouselItem } from 'mdb-react-ui-kit'
 export default function CarouselSlides() {
   return (
     <Navbar.Brand>
-    <MDBCarousel showControls interval={3000}>
-      <MDBCarouselItem itemId={1} interval={2000}>
+    <MDBCarousel showControls interval={2500} h-50>
+      <MDBCarouselItem itemId={1} interval={2500}>
         <img src='https://mdbootstrap.com/img/new/slides/051.jpg' className='d-block w-100' alt='...' />
       </MDBCarouselItem>
       <MDBCarouselItem itemId={2}>
