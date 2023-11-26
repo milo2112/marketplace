@@ -1,9 +1,8 @@
 import { useContext } from 'react'
-import { Navbar, Container, Nav, Badge } from 'react-bootstrap'
+import { Navbar, Container, Nav, Badge, Image } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import GlobalContext from '../context/GlobalContext'
 import currencyFormatter from '../functions/currencyFormatter'
-import Image from 'react-bootstrap/Image';
 
 export default function NavigationBar () {
   const { destinyTotalPrice } = useContext(GlobalContext)
@@ -18,15 +17,24 @@ export default function NavigationBar () {
         <Container>
           <Navbar.Brand>
               <NavLink to='/'>
-                <Image src='..\src\assets\img\backpacker-trip-high-resolution-logo-transparent.png' style={{ width: '115px' }} />
+                <Image src='..\src\assets\img\hello-backpacker-high-resolution-logo-transparent.png' style={{ width: '75px' }} />
               </NavLink>
+          </Navbar.Brand>
+          <Navbar.Brand>
+              <h1 className='text-uppercase fw-bold mb-4' style={{ paddingTop: '20px' , paddingLeft: '450px', color: 'orange',  fontFamily: 'Barrio', fontSize: '30px' }}>
+                Hello Backpacker!
+              </h1>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
-              <h5><NavLink to='/' className={setActiveClass}>Inicio</NavLink></h5>
-              <h5><NavLink to='/shoppingcartview' className={setActiveClass}>🛒</NavLink></h5>
-              <h5><Badge bg='secondary'>$ {currencyFormatter(destinyTotalPrice)}</Badge></h5>
+              <h5 style={{ paddingTop: '20px' , paddingLeft: '450px', fontFamily: 'Barrio', fontSize: '20px' }}><NavLink to='/' className={setActiveClass}>Inicio</NavLink></h5>
+              <h5 >
+                <NavLink to='/shoppingcartview' className={setActiveClass} rel="icon" type="image/svg+xml" href="/cart-shopping-solid.svg">
+                  <Image src='..\src\assets\img\shoppingcarts-favicon-color.png' style={{ width: '43px', marginRight: '13px', marginTop: '10px' }} />
+                </NavLink>
+              </h5>
+              <h5 style={{ paddingTop: '20px', color: 'orange',  fontFamily: 'Barrio', fontSize: '20px' }}><Badge bg='secondary'>$ {currencyFormatter(destinyTotalPrice)}</Badge></h5>
             </Nav>
           </Navbar.Collapse>
         </Container>
