@@ -10,7 +10,7 @@ export default function Catalog () {
       <Container className='d-flex justify-content-center align-items-center'>
         <Row>
           {destinyData.map(({ id, img, name, ingredients, price }) => (
-            <Col className='col-md-4 mt-5 mb-5' key={id}>
+            <Col className='col-md-4 mt-5 mb-5' style={{ paddingLeft: '43px'}}key={id}>
               <DestinyCard
                 id={id}
                 img={img}
