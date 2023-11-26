@@ -43,7 +43,7 @@ export default function DestinyCard ({ id, img, name, ingredients, price }) {
       <Container>
         <Card className='card' style={{ width: '18rem' }} key={id}>
           <div className='overflow'>
-            <Card.Img className='card-img-top' variant='top' src={img} />
+            <Card.Img className='card-img-top' variant='top' src={img} style={{ height: '15rem' }} />
           </div>
           <Card.Body>
             <Card.Title>{name[0].toUpperCase() + name.substring(1)}</Card.Title>

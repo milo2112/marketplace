@@ -5,6 +5,7 @@ import GlobalContext from './context/GlobalContext'
 import NavigationBar from './components/NavigationBar'
 import NotFound from './components/NotFound'
 import Home from './views/Home'
+import DestinyDetail from './components/DestinyDetail'
 
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             {/* <Route path='/shoppingcartview' element={<ShoppingCartView />} /> */}
-            {/* <Route path='/pizzadetail/:idPizza' element={<PizzaDetail />} /> */}
+            <Route path='/destinydetail/:idDestiny' element={<DestinyDetail />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         </BrowserRouter>
