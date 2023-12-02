@@ -1,15 +1,14 @@
-// import React from 'react'
 import { Container } from 'react-bootstrap'
 
 function NotFound () {
   return (
     <>
       <Container className='text-center'>
-        <div className='text-black fw-bold display-6 mt-5 ms-5'>¡Lo que buscas no lo encontrarás aquí!</div>
+        <div className='text-black fw-bold display-6 mt-5 ms-5'>¡Página en construcción!</div>
       </Container>
       <Container className='text-center fluid'>
         <img
-          src='./src/assets/img/notFound.jpg'
+          src='./src/assets/img/2493903.jpg'
           alt='Page Not found img'
         />
       </Container>
