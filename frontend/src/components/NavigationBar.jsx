@@ -28,10 +28,24 @@ export default function NavigationBar () {
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
-              <h5 style={{ paddingTop: '20px' , paddingLeft: '450px', fontFamily: 'Barrio', fontSize: '20px' }}><NavLink to='/' className={setActiveClass}>Inicio</NavLink></h5>
+              <h5 style={{ paddingTop: '20px' , paddingLeft: '150px', fontFamily: 'Barrio', fontSize: '20px' }}><NavLink to='/loginview' className={setActiveClass}>Login</NavLink></h5>
+              <h5 >
+                <NavLink to='/loginview' className={setActiveClass}>
+                  <Image src='..\src\assets\img\login-favicon-color.png' style={{ width: '43px', marginTop: '10px' }} />
+                </NavLink>
+              </h5>
+
+              <h5 style={{ paddingTop: '20px' , paddingLeft: '50px', fontFamily: 'Barrio', fontSize: '20px' }}><NavLink to='/' className={setActiveClass}>Inicio</NavLink></h5>
+              <h5 >
+                <NavLink to='/' className={setActiveClass}>
+                  <Image src='..\src\assets\img\home-favicon-color.png' style={{ width: '43px', marginTop: '10px' }} />
+                </NavLink>
+              </h5>
+              
+              <h5 style={{ paddingTop: '20px' , paddingLeft: '50px', fontFamily: 'Barrio', fontSize: '20px' }}><NavLink to='/shoppingcartview' className={setActiveClass}>Carro</NavLink></h5>
               <h5 >
                 <NavLink to='/shoppingcartview' className={setActiveClass} rel="icon" type="image/svg+xml" href="/cart-shopping-solid.svg">
-                  <Image src='..\src\assets\img\shoppingcarts-favicon-color.png' style={{ width: '43px', marginRight: '13px', marginTop: '10px' }} />
+                  <Image src='..\src\assets\img\shoppingcarts-favicon-color.png' style={{ width: '43px', marginRight: '53px', marginTop: '10px' }} />
                 </NavLink>
               </h5>
               <h5 style={{ paddingTop: '20px', color: 'orange',  fontFamily: 'Barrio', fontSize: '20px' }}><Badge bg='secondary'>$ {currencyFormatter(destinyTotalPrice)}</Badge></h5>
