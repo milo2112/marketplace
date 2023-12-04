@@ -6,6 +6,8 @@ import NavigationBar from './components/NavigationBar'
 import NotFound from './components/NotFound'
 import Home from './views/Home'
 import Login from './views/Login'
+import Register from './views/Register'
+import Admin from './views/Admin'
 import DestinyDetail from './components/DestinyDetail'
 
 
@@ -44,6 +46,8 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/loginview' element={<Login />} />
+            <Route path='/registerview' element={<Register />} />
+            <Route path='/adminview' element={<Admin />} />
             {/* <Route path='/shoppingcartview' element={<ShoppingCartView />} /> */}
             <Route path='/destinydetail/:idDestiny' element={<DestinyDetail />} />
             <Route path='*' element={<NotFound />} />

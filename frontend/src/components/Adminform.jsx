@@ -5,11 +5,15 @@ function Adminform() {
   return (
     <Form style={{ paddingTop: '100px', paddingLeft: '850px' }} className='justify-content-center'>
       <Form.Group className="mb-3 w-25" controlId="formBasicEmail">
+        <Form.Label className='text-warning'>Nombre</Form.Label>
+        <Form.Control type="text" placeholder="Ingrese su Nombre" />
+        <Form.Text className="text-muted"></Form.Text>
+      </Form.Group>      
+      
+      <Form.Group className="mb-3 w-25" controlId="formBasicEmail">
         <Form.Label className='text-warning'>Email</Form.Label>
         <Form.Control type="email" placeholder="Ingrese su email" />
-        <Form.Text className="text-muted">
-          
-        </Form.Text>
+        <Form.Text className="text-muted"></Form.Text>
       </Form.Group>
 
       <Form.Group className="mb-3 w-25" controlId="formBasicPassword">
@@ -19,7 +23,7 @@ function Adminform() {
 
       <Form.Group style={{ paddingTop: '30px', paddingLeft: '100px' }}>
         <Button variant="warning" type="submit">
-          Login
+          Guardar
         </Button>
       </Form.Group>
     </Form>
