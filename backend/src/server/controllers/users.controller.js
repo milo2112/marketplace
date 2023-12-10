@@ -12,7 +12,7 @@ const findSingleUserRequest = (req, res) => {
   daoSQL.findSingleUserFromDB(decoded.email)
     .then((user) => {
       user.length > 0
-        ? res.status(HTTP_STATUS.ok.code).json([{ email: user[0].email, rol: user[0].rol, lenguage: user[0].lenguage }])
+        ? res.status(HTTP_STATUS.ok.code).json([{ email: user[0].email, rol: user[0].rol, name: user[0].name, lastname: user[0].lastname }])
         : res.status(HTTP_STATUS.not_found.code).json({ code: HTTP_STATUS.not_found.code, message: HTTP_STATUS.not_found.text })
     })
     .catch((error) => res.status(HTTP_STATUS.internal_server_error.code).json(error))
@@ -20,7 +20,7 @@ const findSingleUserRequest = (req, res) => {
 
 const authenticationRequest = async (req, res) => {
   const isCorrect = await daoSQL.passCompare(req.body.email, req.body.password)
-
+  console.log(`\n\n-->authenticationRequest.isCorrect: ${isCorrect}\n\n`)
   if (!isCorrect) {
     return res
       .status(HTTP_STATUS.not_found.code)
